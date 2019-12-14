@@ -1,0 +1,89 @@
+ <ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+
+
+	<html lang="en">
+
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8"></meta>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="Bluemoon Admin Panel" />
+
+<meta name="keywords"
+	content="Login, Bluemoon Login, Admin, Admin Dashboard, Dashboard, Bootstrap4, Sass, CSS3, HTML5, Responsive Dashboard, Responsive Admin Template, Admin Template, Best Admin Template, Bootstrap Template, Themeforest" />
+<meta name="author" content="Bootstrap Gallery" />
+<link rel="shortcut icon" href="resources/img/Image1.png" />
+<title>Login</title>
+
+<!--
+        **********************
+        **********************
+        Common CSS files
+        **********************
+        **********************
+    -->
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="resources2/css/bootstrap.min.css" />
+<!-- Icomoon Icons CSS -->
+<link rel="stylesheet" href="resources2/fonts/icomoon/icomoon.css" />
+<!-- Master CSS -->
+<link rel="stylesheet" href="resources2/css/main.css" />
+</head>
+<body class="login-bg">
+
+	<!-- Container start -->
+	<div class="container">
+
+
+		<hr />
+		<div class="row justify-content-md-center">
+			<div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
+				<div class="login-screen">
+				<h:form>
+					<div class="login-box">
+						<div align="center">
+											
+						
+							<a href="#" class="login-logo">
+							
+							<img src="resources/img/Image1.png" alt="Bluemoon Admin Dashboard" />
+							</a>
+						</div>
+		<h:panelGrid columns="2">
+			<h:outputText value="Email"  />
+			<h:inputText value="#{identity.user.email}" id="email" required="true"/>
+			<h:outputText value="Password" />
+			<h:inputSecret value="#{identity.user.password}" />
+		</h:panelGrid>
+		<div class="col-md-5">
+		<h:commandButton class="btn btn-primary btn-block" action="#{identity.doLogin()}" value="Connect" />
+		</div>
+		<div class="col-md-6">
+			<h:commandButton class="btn btn-primary btn-danger" action="#{identity.logout()}" value="Retour" />
+			</div>
+	
+						
+						
+			
+						
+					</div>
+				</h:form>
+				</div>
+			</div>
+		</div>
+		
+	
+	</div>
+	<!-- Container end -->
+</body>
+	</html>
+</ui:composition>

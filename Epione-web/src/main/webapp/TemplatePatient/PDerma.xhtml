@@ -1,0 +1,74 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="/TemplatePatient/indexPatient.xhtml">
+
+
+<ui:define name="content">
+<section class="inner-bg over-layer-black" style="background-image: url('resources/img/bg/5.jpg')">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="depertment-area">
+        <div class="container">
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="depertment-col">
+                            <div class="depertment-list">
+                            <h:link outcome="/TemplatePatient/PChirurgie"
+										value="Chirurgie Depertement" class="flaticon-heart" />
+									<h:link outcome="/TemplatePatient/PRadio"
+										value="Radiothérapie Depertement" class="flaticon-heart" />
+									<h:link outcome="/TemplatePatient/PHematologie"
+										value="Hématologie Depertement" class="flaticon-broken-bone" />
+									<h:link outcome="/TemplatePatient/PAnestesie"
+										value="Anesthésiologie Depertement" class="flaticon-stomach-1" />
+									<h:link outcome="/TemplatePatient/PPediatre"
+										value="Pédiatrie Depertement" class="flaticon-brain" />
+									<h:link outcome="/TemplatePatient/PDentaire"
+										value="Dentaire Depertement" class="flaticon-spine-bone" />
+									<h:link outcome="/TemplatePatient/PDerma"
+										value="Dermatology Depertement" class="flaticon-kidney" />
+                            
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+
+                        <img src="../TemplatePatient/resources/img/depertment/derma.jpg"/>
+                        <h3 class="margin-top-30"> Dermatology Depertment</h3>
+<p>
+    La dermatologie est la branche de la médecine qui s'occupe de la peau, des muqueuses et des phanères (ongles, cheveux, poils) <br></br>
+                     Elle est associée traditionnellement à la vénérologie, c’est-à-dire l'étude des maladies vénériennes ou infections sexuellement transmissibles (IST).  <br></br>
+                     Le médecin spécialisé pratiquant la dermatologie s'appelle le dermatologue3. <br></br>
+
+
+    La peau se compose de plusieurs couches superposées (de la plus profonde à la plus en surface) incluant hypoderme, derme (dermes réticulaire, profond et papillaire), membrane basale et épiderme (Stratum germinativum, granulosum, spinosum, lucidum et corneum).
+                    </p>  
+                        <div class="col-md-6">
+                        </div><div class="col-md-6">
+   <h:button outcome="/TemplatePatient/PDermaDoctor"  class="btn btn-simple"
+										value="voir docteurs" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+</div>
+    </section>
+
+
+
+
+</ui:define>
+</ui:composition>

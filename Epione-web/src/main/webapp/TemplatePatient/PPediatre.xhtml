@@ -1,0 +1,82 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="/TemplatePatient/indexPatient.xhtml">
+
+
+<ui:define name="content">
+<section class="inner-bg over-layer-black" style="background-image: url('resources/img/bg/5.jpg')">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="depertment-area">
+        <div class="container">
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="depertment-col">
+                              <div class="depertment-list">
+                          <h:link outcome="/TemplatePatient/PChirurgie"
+										value="Chirurgie Depertement" class="flaticon-heart" />
+									<h:link outcome="/TemplatePatient/PRadio"
+										value="Radiothérapie Depertement" class="flaticon-heart" />
+									<h:link outcome="/TemplatePatient/PHematologie"
+										value="Hématologie Depertement" class="flaticon-broken-bone" />
+									<h:link outcome="/TemplatePatient/PAnestesie"
+										value="Anesthésiologie Depertement" class="flaticon-stomach-1" />
+									<h:link outcome="/TemplatePatient/PPediatre"
+										value="Pédiatrie Depertement" class="flaticon-brain" />
+									<h:link outcome="/TemplatePatient/PDentaire"
+										value="Dentaire Depertement" class="flaticon-spine-bone" />
+									<h:link outcome="/TemplatePatient/PDerma"
+										value="Dermatology Depertement" class="flaticon-kidney" />
+                            
+                               </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <img src="../TemplatePatient/resources/img/depertment/pédiatre.jpg"/>
+                        <h3 class="margin-top-30">Pédiatrie Depertment</h3>
+ <p>
+                        La pédiatrie est une branche spécialisée de la médecine qui étudie le développement psycho-moteur et physiologique normal de l'enfant, 
+                        ainsi que toute la pathologie qui y a trait (maladies infantiles), 
+                        de la naissance à la période postpubertaire où il devient adulte ;
+                         c'est la médecine des enfants,
+                         l'enfant étant défini en droit comme tout sujet âgé de moins de 18 ans
+                         (article 1er de la Convention relative aux droits de l'enfant). <br></br>
+                        Le médecin spécialisé en pédiatrie s'appelle le pédiatre.<br></br>
+
+
+                        La pédiatrie est différente de la médecine générale puisque
+                         s'adressant spécialement à un organisme en développement
+                         et en transformation permanente. La précocité du diagnostic est ici, 
+                        encore plus qu'ailleurs, vitale pour la santé future de
+                         l'enfant et déterminante pour le pronostic.
+                    </p>
+
+
+                        <div class="col-md-6">
+                        </div><div class="col-md-6">
+   <h:button outcome="/TemplatePatient/PPediatreDoctor"  class="btn btn-simple"
+										value="voir docteurs" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+</ui:define>
+</ui:composition>

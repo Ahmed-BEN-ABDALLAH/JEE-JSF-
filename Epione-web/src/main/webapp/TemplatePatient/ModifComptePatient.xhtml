@@ -1,0 +1,168 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	>
+
+
+	<ui:define name="content">
+		<section class="inner-bg over-layer-black"
+			style="background-image: url('../resources/img/bg/5.jpg')">
+		</section>
+		<style type="text/css">
+.white-button.ui-button.ui-state-default {
+	background-color: #ffffff;
+	color: #222222;
+	border-color: #d6d6d6;
+	/* with the exported variables from Nova and Luna Themes*/
+	border-color: var(- -input-border-color, #d6d6d6);
+}
+
+.white-button.ui-button.ui-state-default:enabled:hover, .white-button.ui-button.ui-state-default:focus
+	{
+	background-color: #f2f2f2;
+	border-color: #ccc;
+	color: #373a3c;
+	/* with the exported variables from Nova and Luna Themes*/
+	border-color: var(- -input-hover-border-color, #ccc);
+}
+
+.green-button.ui-button.ui-state-default {
+	background-color: #5cb85c;
+	border-color: #5cb85c;
+	color: #fff;
+}
+
+.green-button.ui-button.ui-state-default:enabled:hover, .green-button.ui-button.ui-state-default:focus
+	{
+	background-color: #4cae4c;
+	border-color: #5cb85c;
+}
+
+.red-button.ui-button.ui-state-default {
+	background-color: #d9534f;
+	border-color: #d9534f;
+	color: #fff;
+}
+
+.red-button.ui-button.ui-state-default:enabled:hover, .red-button.ui-button.ui-state-default:focus
+	{
+	background-color: #d43f3a;
+	border-color: #d9534f;
+}
+</style>
+
+		<h3 class="margin-top-30" align="center">Formulaire d'inscription
+		</h3>
+		<div class="container" align="center">
+
+			<div class="text-center">
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+					<div class="login-screen" align="center">
+						<div class="login-box" align="center">
+
+
+
+							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+								<div class="form-group">
+
+
+
+									<p:inputText placeholder="Nom" />
+
+
+
+
+
+								</div>
+							</div>
+							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+								<div class="form-group">
+
+
+									<p:inputText placeholder="Prenom" />
+								</div>
+
+							</div>
+							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+								<div class="form-group">
+
+									<p:inputText placeholder="#{identity.user.email}" />
+								</div>
+
+							</div>
+
+
+							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+								<div class="form-group">
+
+
+									<p:inputText placeholder="Numéro carte identité" />
+								</div>
+
+							</div>
+							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+								<div class="form-group">
+
+
+									<p:inputText placeholder="Numéro de téléphone" />
+								</div>
+
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+							<div class="form-group">
+
+
+								<h:inputText placeholder="Adresse-ville"
+									value="#{identity.user.address}" />
+
+							</div>
+						</div>
+
+
+
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+							<div class="form-group">
+
+
+								<p:inputText placeholder="confirm mot de passe" />
+							</div>
+
+						</div>
+
+
+
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12"
+							align="center">
+ <h:commandButton  value="test" action="#{identity.updatePatient()}"/>
+							
+
+							
+
+							
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+
+
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</ui:define>
+</ui:composition>

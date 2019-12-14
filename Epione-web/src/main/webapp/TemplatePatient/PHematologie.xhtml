@@ -1,0 +1,70 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="/TemplatePatient/indexPatient.xhtml">
+
+
+<ui:define name="content">
+<section class="inner-bg over-layer-black" style="background-image: url('resources/img/bg/5.jpg')">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="depertment-area">
+        <div class="container">
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="depertment-col">
+                             <div class="depertment-list">
+                            <h:link outcome="/TemplatePatient/PChirurgie"
+										value="Chirurgie Depertement" class="flaticon-heart" />
+									<h:link outcome="/TemplatePatient/PRadio"
+										value="Radiothérapie Depertement" class="flaticon-heart" />
+									<h:link outcome="/TemplatePatient/PHematologie"
+										value="Hématologie Depertement" class="flaticon-broken-bone" />
+									<h:link outcome="/TemplatePatient/PAnestesie"
+										value="Anesthésiologie Depertement" class="flaticon-stomach-1" />
+									<h:link outcome="/TemplatePatient/PPediatre"
+										value="Pédiatrie Depertement" class="flaticon-brain" />
+									<h:link outcome="/TemplatePatient/PDentaire"
+										value="Dentaire Depertement" class="flaticon-spine-bone" />
+									<h:link outcome="/TemplatePatient/PDerma"
+										value="Dermatology Depertement" class="flaticon-kidney" />
+                            
+                               </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+
+                        <img src="../TemplatePatient/resources/img/depertment/4.jpg"/>
+                        <h3 class="margin-top-30"> Hématologie Depertement</h3>
+<p>
+    L’hématologie est la branche de la médecine qui étudie le sang et ses maladies (ou hémopathies). Elle étudie plus particulièrement les cellules sanguines dont l'origine est hématopoïétique (synthèse de ces cellules dans la moelle osseuse) et qui ont un rôle pour l'oxygénation, l'immunité et la coagulation, et étudie également certaines molécules plasmatiques que sont les facteurs de coagulation
+</p>
+
+
+                        <div class="col-md-6">
+                        </div><div class="col-md-6">
+   <h:button outcome="/TemplatePatient/PHematologieDoctor"  class="btn btn-simple"
+										value="voir docteurs" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+</ui:define>
+</ui:composition>

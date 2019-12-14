@@ -1,0 +1,102 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="/TemplatePatient/indexPatient.xhtml">
+
+<ui:define name="content">
+<section class="inner-bg over-layer-black" style="background-image: url('resources/img/bg/5.jpg')">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+</br>
+<div align="center">
+ <h2>Mes <span class="color-defult">Rendez_vous</span></h2>
+</div>
+                           
+<br>
+</br>
+<h:form>
+<div class="col-md-4">
+<h4>Recherche par date </h4>
+</div>
+<div class="col-md-4">
+<div class="btn-group menu-search-box">
+                            <div class="input-group date margin-bottom-30" data-date-format="yyyy-mm-dd">
+                                        <h:inputText  class="form-control"   placeholder="Reservation Date" value="#{AppointmentM.d}"/>
+                                        
+                                        <div class="input-group-addon">
+                                            <span class="glyphicon glyphicon-th"></span>
+                                        </div>
+                                    </div>
+ 	</div>        
+ 	       
+</div>
+<div class="col-md-2">
+ <h:commandButton action="#{AppointmentM.RecherchePardateApp(AppointmentM.d)}" value="recherche" class="btn btn-black btn-theme pull-right"/>
+</div>
+<br>
+</br>
+<div class="col-md-5" align="center">
+ <h:commandButton action="#{AppointmentM.doListeMyApp()}" value="Lister tous mes rendez vous" class="btn btn-theme btn-block"/>
+
+</div>
+</h:form>
+<br>
+</br>
+<br>
+</br>
+<br>
+</br>
+
+
+	<h:form rendered="#{AppointmentM.afficheform}" >
+                                     <h:dataTable value="#{AppointmentM.myApp}" var="mc">
+
+
+
+
+
+
+
+                                                     <h:column>
+  <div class="row">
+ 
+                    <div class="col-xs-12 col-sm-6 col-md-12">
+                        <div class="service-item text-center style-3 animated fadeInLeftShort slow delay-250 go">
+                            <span class="pe-7s-mail-open"> <h4><a href="#">Rendez vous pour  le #{mc.dateAppointmentJEE}</a></h4>
+                            </span>
+                            <p> Ce rendez vous a été pris  chez
+                            le docteur #{mc.doctor.firstName} #{mc.doctor.lastName} qui est spécialisé en #{mc.doctor.speciality.nom} pour #{mc.reason} </p>
+                            <br>
+                            </br>
+                             <h:commandButton onclick="return confirmer2()" action="#{AppointmentM.DeleteApp(mc.appointmentId)}" value="Annuler ce rendez vous " class="btn btn-theme btn-block"/>
+                        
+						
+						<script>
+	               function confirmer2(){
+	                	return confirm ("Confirmer l'annulation de ce rendez vous ")
+	                       }
+	
+	</script>
+                        </div>
+                    </div>
+                                    </div>
+                    
+                </h:column>   
+                    
+                    
+                 
+ </h:dataTable>
+  </h:form>
+</ui:define>
+</ui:composition>
